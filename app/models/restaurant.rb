@@ -13,6 +13,10 @@ class Restaurant < ApplicationRecord
 
   # Indirect associations
 
+  has_one    :review_photos,
+             :through => :photos,
+             :source => :review_photos
+
   has_many   :city,
              :through => :restaurants,
              :source => :city
