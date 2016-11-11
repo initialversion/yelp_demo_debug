@@ -6,6 +6,10 @@ class City < ApplicationRecord
 
   # Indirect associations
 
+  has_one    :restaurants,
+             :through => :neighborhoods,
+             :source => :neighborhood
+
   # Validations
 
 end
